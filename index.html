@@ -1,0 +1,1239 @@
+/* ========================================
+   GOLDEN INVESTIMENTOS - STYLESHEET
+   Neo-Brutalist Design with Gold & Black
+   ======================================== */
+
+/* Root Variables */
+:root {
+    --color-gold-50: #F9F5E8;
+    --color-gold-100: #F0E6C8;
+    --color-gold-200: #E2CB8F;
+    --color-gold-300: #D4AF37;
+    --color-gold-400: #C5A059;
+    --color-gold-500: #B08D55;
+    --color-gold-600: #8C6B3D;
+    --color-gold-700: #664D29;
+    --color-gold-800: #453218;
+    --color-gold-900: #261A0B;
+    
+    --color-dark-950: #050505;
+    --color-dark-900: #0A0A0A;
+    --color-dark-800: #121212;
+    --color-dark-700: #1E1E1E;
+    
+    --font-sans: "Manrope", sans-serif;
+    --font-mono: "Space Grotesk", monospace;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--color-dark-950);
+    color: #F0F0F0;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+    .container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        max-width: 1280px;
+    }
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+h1 {
+    font-size: 2.25rem;
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.875rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: var(--color-gold-300);
+    color: var(--color-dark-950);
+    border-color: var(--color-gold-300);
+}
+
+.btn-primary:hover {
+    background-color: #FFFFFF;
+    border-color: var(--color-gold-300);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+.btn-outline:hover {
+    background-color: #FFFFFF;
+    color: var(--color-dark-950);
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background-color: rgba(5, 5, 5, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.nav-link {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--color-gold-300);
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.grid-cols-1 {
+    grid-template-columns: 1fr;
+}
+
+.grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media (min-width: 768px) {
+    .md\:grid-cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .md\:grid-cols-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .lg\:grid-cols-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .lg\:grid-cols-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Flexbox */
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.items-start {
+    align-items: flex-start;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.gap-2 {
+    gap: 0.5rem;
+}
+
+.gap-4 {
+    gap: 1rem;
+}
+
+.gap-6 {
+    gap: 1.5rem;
+}
+
+.gap-8 {
+    gap: 2rem;
+}
+
+.gap-12 {
+    gap: 3rem;
+}
+
+.gap-16 {
+    gap: 4rem;
+}
+
+/* Spacing */
+.p-2 { padding: 0.5rem; }
+.p-4 { padding: 1rem; }
+.p-6 { padding: 1.5rem; }
+.p-8 { padding: 2rem; }
+
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+.py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+.py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+.py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+.py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+.py-20 { padding-top: 5rem; padding-bottom: 5rem; }
+
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.mb-8 { margin-bottom: 2rem; }
+.mb-16 { margin-bottom: 4rem; }
+
+.mt-4 { margin-top: 1rem; }
+.pt-4 { padding-top: 1rem; }
+.pt-8 { padding-top: 2rem; }
+.pt-20 { padding-top: 5rem; }
+
+/* Sizing */
+.w-full { width: 100%; }
+.w-80 { width: 20rem; }
+.w-96 { width: 24rem; }
+.w-px { width: 1px; }
+
+.h-80 { height: 20rem; }
+.h-96 { height: 24rem; }
+.h-12 { height: 3rem; }
+.h-16 { height: 4rem; }
+.h-full { height: 100%; }
+
+.min-h-screen { min-height: 100vh; }
+
+.max-w-xs { max-width: 20rem; }
+.max-w-lg { max-width: 32rem; }
+.max-w-2xl { max-width: 42rem; }
+
+/* Colors */
+.text-white { color: #FFFFFF; }
+.text-gold-300 { color: var(--color-gold-300); }
+.text-gray-300 { color: #D1D5DB; }
+.text-gray-400 { color: #9CA3AF; }
+.text-gray-500 { color: #6B7280; }
+
+.bg-dark-950 { background-color: var(--color-dark-950); }
+.bg-dark-900 { background-color: var(--color-dark-900); }
+.bg-dark-800 { background-color: var(--color-dark-800); }
+.bg-gold-300 { background-color: var(--color-gold-300); }
+.bg-gold-300\/10 { background-color: rgba(212, 175, 55, 0.1); }
+.bg-gold-300\/20 { background-color: rgba(212, 175, 55, 0.2); }
+.bg-white\/10 { background-color: rgba(255, 255, 255, 0.1); }
+.bg-white\/20 { background-color: rgba(255, 255, 255, 0.2); }
+.bg-green-500\/20 { background-color: rgba(34, 197, 94, 0.2); }
+
+/* Borders */
+.border {
+    border: 1px solid currentColor;
+}
+
+.border-b-4 {
+    border-bottom: 4px solid currentColor;
+}
+
+.border-t-4 {
+    border-top: 4px solid currentColor;
+}
+
+.border-t {
+    border-top: 1px solid currentColor;
+}
+
+.border-l-4 {
+    border-left: 4px solid currentColor;
+}
+
+.border-gold-300 { border-color: var(--color-gold-300); }
+.border-gold-300\/20 { border-color: rgba(212, 175, 55, 0.2); }
+.border-gold-300\/30 { border-color: rgba(212, 175, 55, 0.3); }
+.border-gold-300\/50 { border-color: rgba(212, 175, 55, 0.5); }
+.border-white\/20 { border-color: rgba(255, 255, 255, 0.2); }
+
+/* Effects */
+.opacity-40 { opacity: 0.4; }
+.opacity-50 { opacity: 0.5; }
+
+.shadow-2xl {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.drop-shadow-lg {
+    filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.1));
+}
+
+.blur-3xl {
+    filter: blur(64px);
+}
+
+.blur-xl {
+    filter: blur(24px);
+}
+
+.backdrop-blur-xl {
+    backdrop-filter: blur(24px);
+}
+
+/* Transforms */
+.scale-105 {
+    transform: scale(1.05);
+}
+
+.-translate-x-1\/2 {
+    transform: translateX(-50%);
+}
+
+.-translate-x-1\/4 {
+    transform: translateX(-25%);
+}
+
+.translate-x-0 {
+    transform: translateX(0);
+}
+
+/* Transitions */
+.transition {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+/* Animations */
+@keyframes slide-in-left {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.animate-slide-in-left {
+    animation: slide-in-left 0.7s ease-out;
+}
+
+.animate-slide-in-right {
+    animation: slide-in-right 1s ease-out 0.2s both;
+}
+
+.animate-bounce {
+    animation: bounce 2s infinite;
+}
+
+.animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Form Elements */
+input, textarea, select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: var(--color-dark-950);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    color: #FFFFFF;
+    font-family: var(--font-sans);
+    transition: border-color 0.3s ease;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #6B7280;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--color-gold-300);
+}
+
+/* Sections */
+section {
+    position: relative;
+}
+
+section.py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.875rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    .hidden {
+        display: none;
+    }
+    .flex-col {
+        flex-direction: column;
+    }
+    .grid-cols-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 768px) {
+    .md\:hidden {
+        display: none;
+    }
+    .md\:flex {
+        display: flex;
+    }
+    .md\:block {
+        display: block;
+    }
+    .md\:text-5xl {
+        font-size: 3rem;
+    }
+    .md\:w-96 {
+        width: 24rem;
+    }
+    .md\:h-96 {
+        height: 24rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .lg\:order-1 {
+        order: 1;
+    }
+    .lg\:order-2 {
+        order: 2;
+    }
+}
+
+/* Utility Classes */
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed { position: fixed; }
+.inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+.bottom-4 { bottom: 1rem; }
+.top-0 { top: 0; }
+.left-0 { left: 0; }
+.right-0 { right: 0; }
+.left-1\/2 { left: 50%; }
+.z-0 { z-index: 0; }
+.z-10 { z-index: 10; }
+.z-20 { z-index: 20; }
+.z-50 { z-index: 50; }
+.-z-10 { z-index: -10; }
+.overflow-hidden { overflow: hidden; }
+.object-cover { object-fit: cover; }
+.object-contain { object-fit: contain; }
+
+/* Inline Elements */
+.inline-flex {
+    display: inline-flex;
+}
+
+.rounded-full {
+    border-radius: 9999px;
+}
+
+.rounded-none {
+    border-radius: 0;
+}
+
+.space-y-2 > * + * { margin-top: 0.5rem; }
+.space-y-4 > * + * { margin-top: 1rem; }
+.space-y-6 > * + * { margin-top: 1.5rem; }
+.space-y-8 > * + * { margin-top: 2rem; }
+
+/* Hover Effects */
+.hover\:scale-105:hover {
+    transform: scale(1.05);
+}
+
+.hover\:border-gold-300\/50:hover {
+    border-color: rgba(212, 175, 55, 0.5);
+}
+
+.hover\:text-gold-300:hover {
+    color: var(--color-gold-300);
+}
+
+.hover\:bg-white:hover {
+    background-color: #FFFFFF;
+}
+
+.hover\:text-black:hover {
+    color: var(--color-dark-950);
+}
+
+.hover\:text-gold-300:hover {
+    color: var(--color-gold-300);
+}
+
+/* Focus States */
+.focus\:outline-none:focus {
+    outline: none;
+}
+
+.focus\:border-gold-300:focus {
+    border-color: var(--color-gold-300);
+}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <meta name="description" content="Holding familiar focada em Venture Capital, Private Equity e Blockchain. Conectamos capital a empreendedores visionários para gerar liberdade financeira." />
+    <meta name="keywords" content="Venture Capital, Private Equity, Investimentos, Blockchain, Startups, Holding Familiar, Liberdade Financeira, Tokenização" />
+    <title>Golden Investimentos | Venture Capital & Private Equity</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-dark-950/95 backdrop-blur border-b border-gold-300/20">
+        <div class="container flex items-center justify-between py-4">
+            <div class="flex items-center gap-2">
+                <span class="text-2xl font-bold">
+                    <span class="text-white">Golden</span>
+                    <span class="text-gold-300">.</span>
+                </span>
+            </div>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#inicio" class="nav-link text-white hover:text-gold-300 transition">INÍCIO</a>
+                <a href="#sobre" class="nav-link text-white hover:text-gold-300 transition">SOBRE</a>
+                <a href="#servicos" class="nav-link text-white hover:text-gold-300 transition">SERVIÇOS</a>
+                <a href="#moeda" class="nav-link text-white hover:text-gold-300 transition">MOEDA GOLDEN</a>
+                <a href="#contato" class="nav-link text-white hover:text-gold-300 transition">CONTATO</a>
+            </div>
+            <button class="md:hidden text-white" id="menu-toggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-dark-950 text-white border-b-4 border-gold-300 pt-20">
+        <div class="absolute inset-0 z-0">
+            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663210798515/eHzdviNbT6yZQTBHzRros9/hero-bg_572c1d13.png" alt="Luxury Background" class="w-full h-full object-cover opacity-40" />
+            <div class="absolute inset-0 bg-gradient-to-b from-dark-950/80 via-dark-950/50 to-dark-950/90"></div>
+        </div>
+
+        <div class="container relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-20">
+            <div class="space-y-8 animate-slide-in-left">
+                <div class="inline-flex items-center gap-2 px-4 py-2 border border-gold-300/30 bg-gold-300/10 text-gold-300 font-mono text-xs uppercase tracking-widest">
+                    <span class="w-2 h-2 bg-gold-300 rounded-full animate-pulse"></span>
+                    Venture Capital & Private Equity
+                </div>
+                
+                <h1 class="text-2xl md:text-5xl font-extrabold tracking-tighter leading-tight">
+                    SUSTENTABILIDADE, <br />
+                    <span class="text-gold-300">CIRCULARIDADE E LIBERDADE FINANCEIRA</span>
+                </h1>
+                
+                <p class="text-lg text-gray-300 max-w-lg font-light leading-relaxed border-l-2 border-gold-300 pl-6">
+                    A Golden Investimentos é uma holding familiar (family office) financeira e não financeira que conecta capital a empreendedores visionários, startups e empreendimentos de alto impacto. Transformamos ideias inovadoras em líderes de mercado dispostos a ser, fazer e ter sustentabilidade e liberdade financeira.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <button class="btn btn-primary" onclick="scrollToSection('contato')">Buscar Investimento</button>
+                    <button class="btn btn-outline" onclick="scrollToSection('portfolio')">Conhecer Portfolio</button>
+                </div>
+            </div>
+
+            <div class="relative flex justify-center items-center animate-slide-in-right">
+                <div class="absolute w-96 h-96 bg-gold-300/20 rounded-full blur-3xl -z-10"></div>
+                <div class="relative w-80 h-80 md:w-96 md:h-96 transition-transform duration-500 hover:scale-105">
+                    <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663210798515/eHzdviNbT6yZQTBHzRros9/moeda_final_0c4fefbd.png" alt="Golden Coin" class="w-full h-full object-contain drop-shadow-lg" />
+                </div>
+                <div class="absolute -top-10 -right-10 bg-white/10 backdrop-blur-xl border border-white/20 p-6 max-w-xs text-white shadow-2xl hidden md:block">
+                    <div class="flex items-center gap-4 mb-2">
+                        <div class="p-2 bg-green-500/20 rounded-full text-green-400 text-xl">🚀</div>
+                        <div>
+                            <p class="text-xs font-mono text-gray-400 uppercase">Startups Aceleradas</p>
+                            <p class="text-2xl font-bold">+45</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/50 animate-bounce cursor-pointer z-20" onclick="scrollToSection('portfolio')">
+            <span class="text-xs font-mono uppercase tracking-widest">Role para baixo</span>
+            <div class="w-px h-12 bg-gradient-to-b from-white/0 via-white/50 to-white/0"></div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-dark-900 text-white">
+        <div class="container">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Nosso Ecossistema</h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">Empresas do Portfolio</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <div class="flex items-center justify-center p-8 bg-dark-950 border border-gold-300/20 hover:border-gold-300/50 transition">
+                    <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663210798515/eHzdviNbT6yZQTBHzRros9/logo_1_5a4c2f6c.png" alt="Logo 1" class="h-16 object-contain" />
+                </div>
+                <div class="flex items-center justify-center p-8 bg-dark-950 border border-gold-300/20 hover:border-gold-300/50 transition">
+                    <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663210798515/eHzdviNbT6yZQTBHzRros9/logo_2_7c8e1a2b.png" alt="Logo 2" class="h-16 object-contain" />
+                </div>
+                <div class="flex items-center justify-center p-8 bg-dark-950 border border-gold-300/20 hover:border-gold-300/50 transition">
+                    <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663210798515/eHzdviNbT6yZQTBHzRros9/logo_3_4f2d9e1c.png" alt="Logo 3" class="h-16 object-contain" />
+                </div>
+                <div class="flex items-center justify-center p-8 bg-dark-950 border border-gold-300/20 hover:border-gold-300/50 transition">
+                    <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663210798515/eHzdviNbT6yZQTBHzRros9/logo_4_9a3f5e2d.png" alt="Logo 4" class="h-16 object-contain" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="py-20 bg-dark-950 text-white border-t-4 border-gold-300">
+        <div class="container">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-8">Investimos em Quem Faz Acontecer</h2>
+                    <p class="text-gray-300 text-lg mb-6 leading-relaxed">
+                        Não somos apenas investidores. Somos parceiros estratégicos que aportam capital, conhecimento e networking para escalar negócios disruptivos.
+                    </p>
+                    <p class="text-gray-400 text-base leading-relaxed">
+                        Golden Investimentos entende que o êxito de uma empresa é sua comunidade empreendedora resiliente e líderes com capacidade de interdependência colaborativa que gerenciam riscos com o fim de cumprir com uma demanda do mercado oferecendo produtos e serviços de excelência para gerar investimento de valor.
+                    </p>
+                </div>
+                <div class="space-y-6">
+                    <div class="p-6 bg-dark-900 border-l-4 border-gold-300">
+                        <h3 class="text-xl font-bold mb-2 text-gold-300">Inovação Disruptiva</h3>
+                        <p class="text-gray-400">Buscamos startups que estão redefinindo mercados e criando novas categorias de consumo e serviço.</p>
+                    </div>
+                    <div class="p-6 bg-dark-900 border-l-4 border-gold-300">
+                        <h3 class="text-xl font-bold mb-2 text-gold-300">Empreendedorismo</h3>
+                        <p class="text-gray-400">Além do capital, oferecemos mentoria, acesso a mercados e suporte operacional para o crescimento.</p>
+                    </div>
+                    <div class="p-6 bg-dark-900 border-l-4 border-gold-300">
+                        <h3 class="text-xl font-bold mb-2 text-gold-300">Escalabilidade Global</h3>
+                        <p class="text-gray-400">Focamos em modelos de negócio com potencial de expansão internacional e crescimento exponencial.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicos" class="py-20 bg-dark-900 text-white">
+        <div class="container">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">O Que Oferecemos</h2>
+                <p class="text-gray-400 text-lg">Soluções completas para impulsionar o crescimento de startups</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 bg-dark-950 border border-gold-300/20 hover:border-gold-300/50 transition">
+                    <h3 class="text-2xl font-bold mb-4 text-gold-300">Venture Capital</h3>
+                    <p class="text-gray-400 mb-4">Investimento em startups de alto potencial de crescimento, do Seed ao Series A.</p>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>✓ Aporte de capital</li>
+                        <li>✓ Mentoria estratégica</li>
+                        <li>✓ Acesso a networking</li>
+                        <li>✓ Suporte em captação futura</li>
+                    </ul>
+                </div>
+                <div class="p-8 bg-dark-950 border border-gold-300/20 hover:border-gold-300/50 transition">
+                    <h3 class="text-2xl font-bold mb-4 text-gold-300">Aceleração de Negócios</h3>
+                    <p class="text-gray-400 mb-4">Programas intensivos para estruturar e escalar seu negócio em tempo recorde.</p>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>✓ Validação de modelo</li>
+                        <li>✓ Growth hacking</li>
+                        <li>✓ Estruturação financeira</li>
+                        <li>✓ Preparação para exit</li>
+                    </ul>
+                </div>
+                <div class="p-8 bg-dark-950 border border-gold-300/20 hover:border-gold-300/50 transition">
+                    <h3 class="text-2xl font-bold mb-4 text-gold-300">Corporate Venture</h3>
+                    <p class="text-gray-400 mb-4">Conectamos grandes empresas a startups inovadoras para gerar valor mútuo.</p>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>✓ Open innovation</li>
+                        <li>✓ M&A estratégico</li>
+                        <li>✓ Parcerias comerciais</li>
+                        <li>✓ Transformação digital</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coin Section -->
+    <section id="moeda" class="py-20 bg-dark-950 text-white border-t-4 border-gold-300">
+        <div class="container">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+                <div class="order-2 lg:order-1">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-8">Golden Notes</h2>
+                    <p class="text-gray-300 text-lg mb-6 leading-relaxed">
+                        Token utilitário com plataforma de tokenização de ativos e Smart contract.
+                    </p>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start gap-4">
+                            <span class="text-gold-300 text-2xl">💰</span>
+                            <div>
+                                <h4 class="font-bold text-white mb-1">Valorização Consistente</h4>
+                                <p class="text-gray-400">Mecanismos de queima e escassez programada garantem pressão deflacionária.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="text-gold-300 text-2xl">🔒</span>
+                            <div>
+                                <h4 class="font-bold text-white mb-1">Segurança Blockchain</h4>
+                                <p class="text-gray-400">Todas as transações são registradas em blockchain pública.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="text-gold-300 text-2xl">⚡</span>
+                            <div>
+                                <h4 class="font-bold text-white mb-1">Usabilidade Real</h4>
+                                <p class="text-gray-400">Use suas moedas para pagar por serviços e produtos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">Comprar Tokens</button>
+                </div>
+                <div class="order-1 lg:order-2 flex justify-center">
+                    <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663210798515/eHzdviNbT6yZQTBHzRros9/moeda_final_0c4fefbd.png" alt="Golden Notes" class="w-80 h-80 object-contain" />
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="flex justify-center">
+                    <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663210798515/eHzdviNbT6yZQTBHzRros9/moeda_final_0c4fefbd.png" alt="Golden Blockchain" class="w-80 h-80 object-contain" />
+                </div>
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-8">Golden Blockchain</h2>
+                    <p class="text-gray-300 text-lg mb-6 leading-relaxed">
+                        Infraestrutura & Tecnologia - Tokenização de ativos digitais com smart contract e escrow account peer-to-peer pela liberdade financeira.
+                    </p>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start gap-4">
+                            <span class="text-gold-300 text-2xl">🔗</span>
+                            <div>
+                                <h4 class="font-bold text-white mb-1">Tecnologia Blockchain</h4>
+                                <p class="text-gray-400">Ecossistema de tokenização de ativos através de Smart Contract sobre Bitcoin.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="text-gold-300 text-2xl">📊</span>
+                            <div>
+                                <h4 class="font-bold text-white mb-1">Trazabilidade Total</h4>
+                                <p class="text-gray-400">Securitização e rastreamento completo de todas as transações.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="text-gold-300 text-2xl">💎</span>
+                            <div>
+                                <h4 class="font-bold text-white mb-1">Staking Rewards</h4>
+                                <p class="text-gray-400">Ganhe renda passiva mantendo suas moedas na carteira oficial.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">Conhecer Tecnologia</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="py-20 bg-dark-900 text-white border-t-4 border-gold-300">
+        <div class="container">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Fale Conosco</h2>
+                <p class="text-gray-400 text-lg">Estamos prontos para atender você</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-xl font-bold text-gold-300 mb-2">Telefone</h3>
+                        <p class="text-gray-300">+55 51 98342 9577</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gold-300 mb-2">E-mail</h3>
+                        <p class="text-gray-300">contato@goldeninvestimentos.io</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gold-300 mb-2">Endereços</h3>
+                        <p class="text-gray-400 text-sm mb-4">
+                            Rua Ernesto Urbani, nº 07 – sala 02 – bairro Centro – Canela/RS, CEP: 95.680-000.
+                        </p>
+                        <p class="text-gray-400 text-sm mb-4">
+                            Rua Joaquim Nabuco, sala 1611, Edifício Trade Center Dom Campelo, Centro, Petrolina/PE, 56304-040
+                        </p>
+                        <p class="text-gray-400 text-sm">
+                            Rua Vinte e Quatro de Outubro, 111 Sala 1108, Bairro Moinhos de Vento em Porto Alegre/RS CEP 90.430-055
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gold-300 mb-2">Horário de Atendimento</h3>
+                        <p class="text-gray-400">Segunda a Sexta: 09h às 18h</p>
+                        <p class="text-gray-400">Sábado: 09h às 13h</p>
+                    </div>
+                </div>
+                
+                <form class="space-y-6" onsubmit="handleFormSubmit(event)">
+                    <input type="text" placeholder="Seu nome completo" required class="w-full px-4 py-3 bg-dark-950 border border-gold-300/30 text-white placeholder-gray-500 focus:outline-none focus:border-gold-300" />
+                    <input type="tel" placeholder="(00) 00000-0000" required class="w-full px-4 py-3 bg-dark-950 border border-gold-300/30 text-white placeholder-gray-500 focus:outline-none focus:border-gold-300" />
+                    <input type="email" placeholder="seu@email.com" required class="w-full px-4 py-3 bg-dark-950 border border-gold-300/30 text-white placeholder-gray-500 focus:outline-none focus:border-gold-300" />
+                    <select required class="w-full px-4 py-3 bg-dark-950 border border-gold-300/30 text-white focus:outline-none focus:border-gold-300">
+                        <option value="">Selecione um assunto</option>
+                        <option value="investir">Quero Investir</option>
+                        <option value="duvida">Dúvida Geral</option>
+                        <option value="parceria">Parceria</option>
+                        <option value="suporte">Suporte Técnico</option>
+                    </select>
+                    <textarea placeholder="Como podemos ajudar?" rows="5" required class="w-full px-4 py-3 bg-dark-950 border border-gold-300/30 text-white placeholder-gray-500 focus:outline-none focus:border-gold-300"></textarea>
+                    <button type="submit" class="btn btn-primary w-full">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-950 text-gray-400 border-t border-gold-300/20 py-12">
+        <div class="container">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="text-white font-bold mb-4">Golden Investimentos</h4>
+                    <p class="text-sm">Holding familiar focada em Venture Capital e Private Equity.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Navegação</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#inicio" class="hover:text-gold-300 transition">Início</a></li>
+                        <li><a href="#sobre" class="hover:text-gold-300 transition">Sobre</a></li>
+                        <li><a href="#servicos" class="hover:text-gold-300 transition">Serviços</a></li>
+                        <li><a href="#moeda" class="hover:text-gold-300 transition">Moeda Golden</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Contato</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>+55 51 98342 9577</li>
+                        <li>contato@goldeninvestimentos.io</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Legal</h4>
+                    <p class="text-sm">CNPJ: 52.575.717/0001-65</p>
+                </div>
+            </div>
+            <div class="border-t border-gold-300/20 pt-8 text-center text-sm">
+                <p>&copy; 2026 Golden Investimentos. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+
+// ========================================
+// GOLDEN INVESTIMENTOS - MAIN JAVASCRIPT
+// ========================================
+
+// Scroll to Section Function
+function scrollToSection(id) {
+    const element = document.getElementById(id);
+    if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+// Form Submit Handler
+function handleFormSubmit(event) {
+    event.preventDefault();
+    
+    const form = event.target;
+    const formData = new FormData(form);
+    
+    // Get form values
+    const name = form.querySelector('input[type="text"]').value;
+    const phone = form.querySelector('input[type="tel"]').value;
+    const email = form.querySelector('input[type="email"]').value;
+    const subject = form.querySelector('select').value;
+    const message = form.querySelector('textarea').value;
+    
+    // Validate form
+    if (!name || !phone || !email || !subject || !message) {
+        alert('Por favor, preencha todos os campos.');
+        return;
+    }
+    
+    // Create WhatsApp message
+    const whatsappMessage = `Olá! Meu nome é ${name}. Telefone: ${phone}. Email: ${email}. Assunto: ${subject}. Mensagem: ${message}`;
+    const whatsappURL = `https://wa.me/5551983429577?text=${encodeURIComponent(whatsappMessage)}`;
+    
+    // Open WhatsApp
+    window.open(whatsappURL, '_blank');
+    
+    // Reset form
+    form.reset();
+    alert('Mensagem preparada! Você será redirecionado para o WhatsApp.');
+}
+
+// Mobile Menu Toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menu-toggle');
+    
+    if (menuToggle) {
+        menuToggle.addEventListener('click', function() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('mobile-menu-open');
+        });
+    }
+    
+    // Close mobile menu when clicking on a link
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const nav = document.querySelector('nav');
+            nav.classList.remove('mobile-menu-open');
+        });
+    });
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+    
+    // Add scroll event listener for navbar background
+    window.addEventListener('scroll', function() {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 50) {
+            nav.style.backgroundColor = 'rgba(5, 5, 5, 0.98)';
+        } else {
+            nav.style.backgroundColor = 'rgba(5, 5, 5, 0.95)';
+        }
+    });
+    
+    // Intersection Observer for animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+    
+    // Observe all sections
+    document.querySelectorAll('section').forEach(section => {
+        section.style.opacity = '0.8';
+        section.style.transform = 'translateY(20px)';
+        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(section);
+    });
+});
+
+// Lazy Load Images
+function lazyLoadImages() {
+    const images = document.querySelectorAll('img[data-src]');
+    
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.removeAttribute('data-src');
+                    imageObserver.unobserve(img);
+                }
+            });
+        });
+        
+        images.forEach(img => imageObserver.observe(img));
+    } else {
+        // Fallback for browsers that don't support IntersectionObserver
+        images.forEach(img => {
+            img.src = img.dataset.src;
+            img.removeAttribute('data-src');
+        });
+    }
+}
+
+// Call lazy load when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', lazyLoadImages);
+} else {
+    lazyLoadImages();
+}
+
+// Smooth scroll behavior for all browsers
+document.documentElement.style.scrollBehavior = 'smooth';
+
+// Add active class to nav links based on scroll position
+window.addEventListener('scroll', function() {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    let current = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= sectionTop - 200) {
+            current = section.getAttribute('id');
+        }
+    });
+    
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').slice(1) === current) {
+            link.classList.add('active');
+        }
+    });
+});
+
+// Add active nav link styling
+const style = document.createElement('style');
+style.textContent = `
+    .nav-link.active {
+        color: #D4AF37;
+        border-bottom: 2px solid #D4AF37;
+    }
+`;
+document.head.appendChild(style);
+
+// Counter animation for statistics
+function animateCounter(element, target, duration = 2000) {
+    let current = 0;
+    const increment = target / (duration / 16);
+    
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            element.textContent = target;
+            clearInterval(timer);
+        } else {
+            element.textContent = Math.floor(current);
+        }
+    }, 16);
+}
+
+// Observe counters and animate them
+const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.dataset.animated) {
+            const target = parseInt(entry.target.textContent);
+            if (!isNaN(target) && target > 0) {
+                animateCounter(entry.target, target);
+                entry.target.dataset.animated = 'true';
+            }
+        }
+    });
+});
+
+// Observe all elements with data-counter attribute
+document.querySelectorAll('[data-counter]').forEach(el => {
+    counterObserver.observe(el);
+});
+
+// Add keyboard navigation
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        // Close any open modals or menus
+        const nav = document.querySelector('nav');
+        if (nav.classList.contains('mobile-menu-open')) {
+            nav.classList.remove('mobile-menu-open');
+        }
+    }
+});
+
+// Performance: Debounce scroll events
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// Optimize scroll performance
+const optimizedScroll = debounce(function() {
+    // Scroll event logic here
+}, 100);
+
+window.addEventListener('scroll', optimizedScroll);
+
+// Add loading state to buttons
+document.querySelectorAll('button[type="submit"]').forEach(button => {
+    button.addEventListener('click', function() {
+        const originalText = this.textContent;
+        this.textContent = 'Enviando...';
+        this.disabled = true;
+        
+        setTimeout(() => {
+            this.textContent = originalText;
+            this.disabled = false;
+        }, 2000);
+    });
+});
+
+// Accessibility: Add focus visible styles
+const style2 = document.createElement('style');
+style2.textContent = `
+    button:focus-visible,
+    a:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible,
+    select:focus-visible {
+        outline: 2px solid #D4AF37;
+        outline-offset: 2px;
+    }
+`;
+document.head.appendChild(style2);
+
+console.log('Golden Investimentos - Website loaded successfully');
