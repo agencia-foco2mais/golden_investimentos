@@ -1,0 +1,1974 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <meta name="description" content="Holding familiar focada em Venture Capital, Private Equity e Blockchain. Conectamos capital a empreendedores visionários para gerar liberdade financeira." />
+    <meta name="keywords" content="Venture Capital, Private Equity, Investimentos, Blockchain, Startups, Holding Familiar, Liberdade Financeira, Tokenização" />
+    <title>Golden Investimentos | Venture Capital & Private Equity</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Manrope", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #050505;
+            color: #F0F0F0;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                padding: 0 2rem;
+            }
+        }
+
+        /* Navigation */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background-color: rgba(5, 5, 5, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid #D4AF37;
+            height: 80px;
+            display: flex;
+            align-items: center;
+        }
+
+        header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .logo img {
+            height: 48px;
+            width: auto;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .logo img:hover {
+            transform: scale(1.05);
+        }
+
+        nav ul {
+            display: none;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            nav ul {
+                display: flex;
+            }
+        }
+
+        nav a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0;
+            height: 2px;
+            background-color: #D4AF37;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after,
+        nav a.active::after {
+            width: 100%;
+        }
+
+        nav a:hover {
+            color: #D4AF37;
+        }
+
+        .menu-toggle {
+            display: block;
+            background: none;
+            border: none;
+            color: #FFFFFF;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        @media (min-width: 768px) {
+            .menu-toggle {
+                display: none;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background-color: #0A0A0A;
+            border-bottom: 4px solid #D4AF37;
+            margin-top: 80px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(10, 10, 10, 0.9) 100%);
+            z-index: 1;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 10;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+            padding: 3rem 1rem;
+        }
+
+        @media (min-width: 1024px) {
+            .hero .container {
+                grid-template-columns: 1fr 1fr;
+                gap: 4rem;
+            }
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            background-color: rgba(212, 175, 55, 0.1);
+            backdrop-filter: blur(10px);
+            color: #D4AF37;
+            font-family: "Space Grotesk", monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-badge::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: #D4AF37;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        @media (min-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        .hero h1 .gold {
+            background: linear-gradient(to right, #D4AF37, #F0E6C8, #D4AF37);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            color: #D1D5DB;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            border-left: 2px solid #D4AF37;
+            padding-left: 1.5rem;
+        }
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .button-group {
+                flex-direction: row;
+            }
+        }
+
+        button, a.btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.875rem;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 0;
+            font-family: "Manrope", sans-serif;
+        }
+
+        .btn-primary {
+            background-color: #D4AF37;
+            color: #050505;
+            border-color: #D4AF37;
+        }
+
+        .btn-primary:hover {
+            background-color: #FFFFFF;
+            border-color: #D4AF37;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: #FFFFFF;
+            border-color: #FFFFFF;
+        }
+
+        .btn-outline:hover {
+            background-color: #FFFFFF;
+            color: #050505;
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: slideInRight 0.7s ease-out;
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            max-height: 500px;
+            filter: drop-shadow(0 20px 50px rgba(212, 175, 55, 0.3));
+            transition: transform 0.5s ease;
+        }
+
+        .hero-image img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 0;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        @media (min-width: 768px) {
+            section h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            background-color: #000000;
+            border-bottom: 1px solid #333333;
+        }
+
+        .portfolio-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .portfolio-header p {
+            color: #9CA3AF;
+            margin-top: 0.5rem;
+            font-family: "Space Grotesk", monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .portfolio-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            background-color: transparent;
+            border: none;
+            transition: transform 0.3s ease;
+            min-height: 150px;
+        }
+
+        .portfolio-item:hover {
+            transform: scale(1.1);
+        }
+
+        .portfolio-item img {
+            max-width: 100%;
+            max-height: 100px;
+            object-fit: contain;
+        }
+
+        /* Features Section */
+        .features {
+            background-color: #F9F5E8;
+            color: #050505;
+        }
+
+        .features-header {
+            display: flex;
+            flex-direction: column;
+            md:flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 4rem;
+            gap: 2rem;
+        }
+
+        .features h2 {
+            color: #050505;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .features-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .feature-card {
+            padding: 2.5rem;
+            background-color: #FFFFFF;
+            border: 1px solid #E5E7EB;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 96px;
+            height: 96px;
+            background-color: #F3F4F6;
+            border-radius: 0 0 0 100%;
+            margin-right: -48px;
+            margin-top: -48px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            border-color: #D4AF37;
+            box-shadow: 8px 8px 0px 0px rgba(212, 175, 55, 0.2);
+        }
+
+        .feature-card:hover::before {
+            background-color: rgba(212, 175, 55, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .feature-card h3 {
+            color: #D4AF37;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .feature-card p {
+            color: #666666;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* About Section */
+        .about {
+            background-color: #0A0A0A;
+            border-top: 4px solid #D4AF37;
+        }
+
+        .about-header {
+            background-color: #050505;
+            color: #FFFFFF;
+            padding: 6rem 0;
+            margin-bottom: 0;
+        }
+
+        .about-header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-header .gold {
+            color: #D4AF37;
+        }
+
+        .about-header p {
+            font-size: 1.25rem;
+            color: #D1D5DB;
+            border-left: 4px solid #D4AF37;
+            padding-left: 1.5rem;
+            max-width: 48rem;
+        }
+
+        .about-content {
+            background-color: #FFFFFF;
+            color: #050505;
+            padding: 6rem 0;
+        }
+
+        .about-content .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+        }
+
+        @media (min-width: 1024px) {
+            .about-content .container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .about-content h2 {
+            color: #050505;
+            margin-bottom: 2rem;
+        }
+
+        .about-content p {
+            color: #666666;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .about-checklist {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        @media (min-width: 640px) {
+            .about-checklist {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 700;
+            color: #050505;
+        }
+
+        .checklist-item::before {
+            content: '✓';
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            background-color: #D4AF37;
+            color: #050505;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+
+        .about-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: -16px;
+            left: -16px;
+            width: 100%;
+            height: 100%;
+            border: 2px solid #D4AF37;
+            z-index: 0;
+        }
+
+        .about-image-inner {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            background-color: #050505;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about-image img {
+            max-width: 100%;
+            height: auto;
+            max-height: 400px;
+            filter: drop-shadow(0 10px 30px rgba(212, 175, 55, 0.3));
+        }
+
+        .about-values {
+            background-color: #F9F5E8;
+            padding: 6rem 0;
+            border-top: 1px solid #E5E7EB;
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        .about-values h2 {
+            text-align: center;
+            color: #050505;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-values-intro {
+            text-align: center;
+            color: #666666;
+            margin-bottom: 4rem;
+            max-width: 48rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .values-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .value-card {
+            background-color: #FFFFFF;
+            padding: 2.5rem;
+            text-align: center;
+            border: 1px solid #E5E7EB;
+            transition: all 0.3s ease;
+        }
+
+        .value-card:hover {
+            border-color: #D4AF37;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .value-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            background-color: rgba(212, 175, 55, 0.1);
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .value-card:hover .value-icon {
+            background-color: #D4AF37;
+            color: #050505;
+        }
+
+        .value-card h3 {
+            color: #050505;
+            margin-bottom: 1rem;
+        }
+
+        .value-card p {
+            color: #666666;
+            font-size: 0.95rem;
+        }
+
+        /* Services Section */
+        .services {
+            background-color: #F9F5E8;
+            color: #050505;
+        }
+
+        .services-header {
+            background-color: #0A0A0A;
+            color: #FFFFFF;
+            padding: 5rem 0;
+            border-bottom: 4px solid #D4AF37;
+            text-align: center;
+        }
+
+        .services-header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .services-header .gold {
+            color: #D4AF37;
+        }
+
+        .services-header p {
+            font-size: 1.25rem;
+            color: #9CA3AF;
+            max-width: 42rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .services-list {
+            padding: 6rem 0;
+            display: flex;
+            flex-direction: column;
+            gap: 6rem;
+        }
+
+        .service-item {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (min-width: 1024px) {
+            .service-item {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .service-item.reverse {
+                direction: rtl;
+            }
+
+            .service-item.reverse > * {
+                direction: ltr;
+            }
+        }
+
+        .service-content h2 {
+            color: #050505;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-content p {
+            color: #666666;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .service-features {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (min-width: 640px) {
+            .service-features {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .service-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: #050505;
+            font-weight: 600;
+        }
+
+        .service-feature::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: #D4AF37;
+            flex-shrink: 0;
+        }
+
+        .service-image {
+            position: relative;
+        }
+
+        .service-image::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-color: #D4AF37;
+            transform: translate(16px, 16px);
+            border: 2px solid #050505;
+            z-index: 0;
+        }
+
+        .service-image-inner {
+            position: relative;
+            z-index: 10;
+            border: 2px solid #050505;
+            overflow: hidden;
+            background-color: #FFFFFF;
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: filter 0.5s ease;
+        }
+
+        .service-item:hover .service-image img {
+            filter: grayscale(0%);
+        }
+
+        .services-investors {
+            background-color: #0A0A0A;
+            color: #FFFFFF;
+            padding: 6rem 0;
+        }
+
+        .services-investors h2 {
+            text-align: center;
+            color: #FFFFFF;
+            margin-bottom: 1rem;
+        }
+
+        .services-investors-intro {
+            text-align: center;
+            color: #9CA3AF;
+            margin-bottom: 1.5rem;
+        }
+
+        .investors-divider {
+            width: 96px;
+            height: 4px;
+            background-color: #D4AF37;
+            margin: 0 auto 4rem;
+        }
+
+        .investors-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .investors-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .investor-card {
+            background-color: #121212;
+            padding: 2rem;
+            border: 1px solid #333333;
+            transition: border-color 0.3s ease;
+        }
+
+        .investor-card:hover {
+            border-color: #D4AF37;
+        }
+
+        .investor-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .investor-card h3 {
+            color: #FFFFFF;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            font-size: 1rem;
+        }
+
+        .investor-card p {
+            color: #9CA3AF;
+            font-size: 0.9rem;
+        }
+
+        /* Coins Section */
+        .coins {
+            background-color: #0A0A0A;
+            border-top: 4px solid #D4AF37;
+        }
+
+        .coins-split {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0;
+            min-height: 90vh;
+        }
+
+        @media (min-width: 1024px) {
+            .coins-split {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .coin-side {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 3rem;
+            border-bottom: 1px solid #333333;
+            transition: background-color 0.5s ease;
+        }
+
+        @media (min-width: 1024px) {
+            .coin-side {
+                border-bottom: none;
+                border-right: 1px solid #333333;
+                padding: 5rem;
+            }
+
+            .coin-side:last-child {
+                border-right: none;
+            }
+        }
+
+        .coin-side:hover {
+            background-color: rgba(255, 255, 255, 0.03);
+        }
+
+        .coin-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.375rem 0.75rem;
+            border: 1px solid #D4AF37;
+            color: #D4AF37;
+            font-family: "Space Grotesk", monospace;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 2rem;
+            width: fit-content;
+        }
+
+        .coin-badge.green {
+            border-color: #22C55E;
+            color: #22C55E;
+        }
+
+        .coin-title {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 2rem;
+        }
+
+        .coin-title .highlight {
+            color: #D4AF37;
+        }
+
+        .coin-title .highlight.green {
+            color: #22C55E;
+        }
+
+        .coin-description {
+            font-size: 1.125rem;
+            color: #D1D5DB;
+            line-height: 1.8;
+            max-width: 28rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .coin-image-small {
+            width: 192px;
+            height: 192px;
+            margin-bottom: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .coin-image-small img {
+            max-width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 30px rgba(212, 175, 55, 0.3));
+            transition: transform 0.5s ease;
+        }
+
+        .coin-side:hover .coin-image-small img {
+            transform: scale(1.1);
+        }
+
+        .coin-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: fit-content;
+        }
+
+        @media (min-width: 640px) {
+            .coin-buttons {
+                flex-direction: row;
+            }
+        }
+
+        /* Coin Benefits */
+        .coin-benefits {
+            background-color: #FFFFFF;
+            color: #050505;
+            padding: 6rem 0;
+        }
+
+        .coin-benefits h2 {
+            text-align: center;
+            color: #050505;
+            margin-bottom: 1rem;
+        }
+
+        .coin-benefits-intro {
+            text-align: center;
+            color: #666666;
+            margin-bottom: 4rem;
+            max-width: 48rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        @media (min-width: 1024px) {
+            .benefits-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 3rem;
+            }
+        }
+
+        .benefits-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .benefit-item {
+            display: flex;
+            gap: 1rem;
+            padding: 1.5rem;
+            border: 1px solid #E5E7EB;
+            transition: all 0.3s ease;
+        }
+
+        .benefit-item:hover {
+            border-color: #D4AF37;
+            background-color: #F9F5E8;
+        }
+
+        .benefit-icon {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #050505;
+            color: #D4AF37;
+            font-size: 1rem;
+        }
+
+        .benefit-content h3 {
+            color: #050505;
+            margin-bottom: 0.5rem;
+            font-size: 1.125rem;
+        }
+
+        .benefit-content p {
+            color: #666666;
+            font-size: 0.875rem;
+            margin: 0;
+        }
+
+        .wallet-box {
+            background-color: #0A0A0A;
+            color: #FFFFFF;
+            padding: 3rem;
+            border: 4px solid #D4AF37;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 400px;
+        }
+
+        .wallet-box h3 {
+            color: #FFFFFF;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .wallet-box p {
+            color: #9CA3AF;
+            margin-bottom: 2rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: #0A0A0A;
+            border-top: 4px solid #D4AF37;
+        }
+
+        .contact-header {
+            background-color: #050505;
+            color: #FFFFFF;
+            padding: 5rem 0;
+            border-bottom: 4px solid #D4AF37;
+            text-align: center;
+        }
+
+        .contact-header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .contact-header .gold {
+            color: #D4AF37;
+        }
+
+        .contact-header p {
+            font-size: 1.25rem;
+            color: #9CA3AF;
+            max-width: 42rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-content {
+            background-color: #FFFFFF;
+            color: #050505;
+            padding: 6rem 0;
+        }
+
+        .contact-content .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+        }
+
+        @media (min-width: 1024px) {
+            .contact-content .container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .contact-info h2 {
+            color: #050505;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info p {
+            color: #666666;
+            margin-bottom: 2rem;
+        }
+
+        .contact-channels {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-channel {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .contact-channel-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(212, 175, 55, 0.1);
+            color: #D4AF37;
+            flex-shrink: 0;
+            font-size: 1.5rem;
+        }
+
+        .contact-channel-content h3 {
+            color: #050505;
+            margin-bottom: 0.25rem;
+            font-size: 1rem;
+        }
+
+        .contact-channel-content p {
+            color: #666666;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .contact-form {
+            background-color: #F9F5E8;
+            padding: 2rem;
+            border: 1px solid #E5E7EB;
+        }
+
+        .contact-form h3 {
+            color: #050505;
+            margin-bottom: 2rem;
+            font-size: 1.25rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #9CA3AF;
+            margin-bottom: 0.5rem;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            background-color: #FFFFFF;
+            border: 1px solid #E5E7EB;
+            color: #050505;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+            border-radius: 0;
+        }
+
+        input::placeholder, textarea::placeholder {
+            color: #D1D5DB;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #D4AF37;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* CTA Section */
+        .cta {
+            background-color: #D4AF37;
+            color: #050505;
+            padding: 6rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta h2 {
+            color: #050505;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .cta h2 {
+                font-size: 3rem;
+            }
+        }
+
+        .cta p {
+            text-align: center;
+            color: #050505;
+            margin-bottom: 3rem;
+            font-size: 1.25rem;
+            max-width: 42rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 640px) {
+            .cta-buttons {
+                flex-direction: row;
+            }
+        }
+
+        .cta .btn-primary {
+            background-color: #050505;
+            color: #FFFFFF;
+            border-color: #050505;
+        }
+
+        .cta .btn-primary:hover {
+            background-color: #FFFFFF;
+            color: #050505;
+        }
+
+        .cta .btn-outline {
+            background-color: transparent;
+            color: #050505;
+            border-color: #050505;
+        }
+
+        .cta .btn-outline:hover {
+            background-color: #050505;
+            color: #FFFFFF;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #050505;
+            border-top: 1px solid #333333;
+            padding: 4rem 0 2rem;
+            color: #9CA3AF;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        footer h4 {
+            color: #FFFFFF;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            font-size: 0.875rem;
+            line-height: 1.6;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+        }
+
+        footer a {
+            color: #9CA3AF;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #D4AF37;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333333;
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.875rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-bottom {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+        /* Utilities */
+        .text-center {
+            text-align: center;
+        }
+
+        .mb-4 {
+            margin-bottom: 1rem;
+        }
+
+        .mb-8 {
+            margin-bottom: 2rem;
+        }
+
+        .mt-4 {
+            margin-top: 1rem;
+        }
+
+        .w-full {
+            width: 100%;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            z-index: 20;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(10px); }
+        }
+
+        .scroll-indicator span {
+            font-size: 0.625rem;
+            font-family: "Space Grotesk", monospace;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .scroll-indicator-line {
+            width: 1px;
+            height: 48px;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo" onclick="scrollToSection('inicio')">
+                <img src="images/logo_black.png" alt="Golden Investimentos" />
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio" class="nav-link">INÍCIO</a></li>
+                    <li><a href="#portfolio" class="nav-link">PORTFOLIO</a></li>
+                    <li><a href="#sobre" class="nav-link">SOBRE</a></li>
+                    <li><a href="#servicos" class="nav-link">SERVIÇOS</a></li>
+                    <li><a href="#moeda" class="nav-link">MOEDA GOLDEN</a></li>
+                    <li><a href="#contato" class="nav-link">CONTATO</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle">☰</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    Venture Capital & Private Equity
+                </div>
+                <h1>SUSTENTABILIDADE,<br><span class="gold">CIRCULARIDADE E LIBERDADE FINANCEIRA</span></h1>
+                <p>A Golden Investimentos é uma holding familiar (family office) financeira e não financeira que conecta capital a empreendedores visionários, startups e empreendimentos de alto impacto. Transformamos ideias inovadoras em líderes de mercado dispostos a ser, fazer e ter sustentabilidade e liberdade financeira.</p>
+                <div class="button-group">
+                    <button class="btn-primary" onclick="scrollToSection('contato')">Buscar Investimento</button>
+                    <button class="btn-outline" onclick="scrollToSection('portfolio')">Conhecer Portfolio</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/moeda_v2.png" alt="Golden Coin" />
+            </div>
+        </div>
+        <div class="scroll-indicator" onclick="scrollToSection('portfolio')">
+            <span>Role para baixo</span>
+            <div class="scroll-indicator-line"></div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="portfolio-header">
+                <p>Nosso Ecossistema</p>
+                <h2>EMPRESAS DO PORTFOLIO</h2>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item"><img src="images/partners_white/logo-1.png" alt="Partner" /></div>
+                <div class="portfolio-item"><img src="images/partners_white/logo-3.png" alt="Partner" /></div>
+                <div class="portfolio-item"><img src="images/partners_white/logo-5.png" alt="Partner" /></div>
+                <div class="portfolio-item"><img src="images/partners_white/logo-7.png" alt="Partner" /></div>
+                <div class="portfolio-item"><img src="images/partners_white/logo-9.png" alt="Partner" /></div>
+                <div class="portfolio-item"><img src="images/partners_white/logo-11.png" alt="Partner" /></div>
+                <div class="portfolio-item"><img src="images/partners_white/logo-13.png" alt="Partner" /></div>
+                <div class="portfolio-item"><img src="images/partners_white/logo-15.png" alt="Partner" /></div>
+                <div class="portfolio-item"><img src="images/partners_white/logo-17.png" alt="Partner" /></div>
+                <div class="portfolio-item"><img src="images/partners_white/logo-19.png" alt="Partner" /></div>
+                <div class="portfolio-item"><img src="images/partners_white/logo-21.png" alt="Partner" /></div>
+                <div class="portfolio-item"><img src="images/partners_white/logo-23.png" alt="Partner" /></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-header">
+                <div>
+                    <h2>INVESTIMOS EM<br><span style="color: #D4AF37;">QUEM FAZ ACONTECER</span></h2>
+                    <p style="color: #666666; font-size: 1.125rem; margin-top: 1rem; max-width: 32rem;">Não somos apenas investidores. Somos parceiros estratégicos que aportam capital, conhecimento e networking para escalar negócios disruptivos.</p>
+                </div>
+                <button class="btn-outline" style="background-color: #050505; color: #FFFFFF; border-color: #050505;" onclick="scrollToSection('sobre')">Nossa Tese de Investimento →</button>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">💡</div>
+                    <h3>Inovação Disruptiva</h3>
+                    <p>Buscamos startups que estão redefinindo mercados e criando novas categorias de consumo e serviço.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Empreendedorismo</h3>
+                    <p>Além do capital, oferecemos mentoria, acesso a mercados e suporte operacional para o crescimento.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Escalabilidade Global</h3>
+                    <p>Focamos em modelos de negócio com potencial de expansão internacional e crescimento exponencial.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="sobre">
+        <div class="about-header">
+            <div class="container">
+                <h1>NOSSA <span class="gold">MISSÃO</span></h1>
+                <p>A Golden Investimentos nasceu para ser o combustível de negócios extraordinários. Somos uma firma de Venture Capital dedicada a identificar, investir e escalar as startups que definirão o futuro.</p>
+            </div>
+        </div>
+
+        <div class="about-content">
+            <div class="container">
+                <div>
+                    <h2>MAIS QUE CAPITAL, PARCERIA ESTRATÉGICA</h2>
+                    <p>Golden Investimentos entende que o êxito de uma empresa é sua comunidade empreendedora resiliente e líderes com capacidade de interdependência colaborativa que gerenciam riscos com o fim de cumprir com uma demanda do mercado oferecendo produtos e serviços de excelência para gerar investimento de valor.</p>
+                    <p>Atuamos em Agricultura irrigada, programas genéticos, energias renováveis, Fintech e Blockchain as service, incorporação imobiliária, domótica IoT, inteligência artificial, acreditação de carbono e Cleantechs, bem-estar e telemedicina.</p>
+                    <p>Fundada por Julio Camargo Majfud e Jimena Mercadal. Golden Investimentos é a holding financeira e não financeira familiar Camargo Mercadal Investimentos Ltda.</p>
+                    <div class="about-checklist">
+                        <div class="checklist-item">Dinheiro inteligente</div>
+                        <div class="checklist-item">Acesso a mentores</div>
+                        <div class="checklist-item">Redes globais</div>
+                        <div class="checklist-item">Suporte Operacional</div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-image-inner">
+                        <img src="images/moeda_v2.png" alt="Golden Coin" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-values">
+            <div class="container">
+                <h2>NOSSOS PILARES</h2>
+                <p class="about-values-intro">Investimos em pessoas e ideias que têm o poder de transformar mercados.</p>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">🚀</div>
+                        <h3>Inovação</h3>
+                        <p>Buscamos soluções disruptivas que resolvam problemas reais de forma escalável.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">💼</div>
+                        <h3>Empreendedorismo</h3>
+                        <p>Apoiamos fundadores resilientes e visionários, que não têm medo de desafiar o status quo.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">👥</div>
+                        <h3>Colaboração</h3>
+                        <p>Acreditamos na força do ecossistema e na troca de conhecimento entre nossas investidas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="servicos">
+        <div class="services-header">
+            <div class="container">
+                <h1>O QUE <span class="gold">OFERECEMOS</span></h1>
+                <p>Soluções completas para impulsionar o crescimento de startups e conectar investidores a oportunidades únicas.</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="services-list">
+                <div class="service-item">
+                    <div class="service-content">
+                        <div style="display: inline-flex; align-items: center; justify-content: center; width: 80px; height: 80px; background-color: #D4AF37; color: #050505; border: 2px solid #050505; box-shadow: 4px 4px 0px 0px rgba(0,0,0,1); margin-bottom: 1rem; font-size: 2rem;">🚀</div>
+                        <h2>Venture Capital</h2>
+                        <p>Investimento em startups de alto potencial de crescimento, do Seed ao Series A.</p>
+                        <div class="service-features">
+                            <div class="service-feature">Aporte de capital</div>
+                            <div class="service-feature">Mentoria estratégica</div>
+                            <div class="service-feature">Acesso a networking</div>
+                            <div class="service-feature">Suporte em captação futura</div>
+                            <div class="service-feature">M&A</div>
+                            <div class="service-feature">Estruturação de finanças descentralizadas</div>
+                        </div>
+                        <button class="btn-primary" style="background-color: #050505; color: #FFFFFF; border-color: #050505;">Saiba Mais</button>
+                    </div>
+                    <div class="service-image">
+                        <div class="service-image-inner">
+                            <img src="images/service_vc_coin_6f6e4be0.png" alt="Venture Capital" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-item reverse">
+                    <div class="service-content">
+                        <div style="display: inline-flex; align-items: center; justify-content: center; width: 80px; height: 80px; background-color: #D4AF37; color: #050505; border: 2px solid #050505; box-shadow: 4px 4px 0px 0px rgba(0,0,0,1); margin-bottom: 1rem; font-size: 2rem;">📈</div>
+                        <h2>Aceleração de Negócios</h2>
+                        <p>Programas intensivos para estruturar e escalar seu negócio em tempo recorde.</p>
+                        <div class="service-features">
+                            <div class="service-feature">Validação de modelo de negócio</div>
+                            <div class="service-feature">Growth hacking</div>
+                            <div class="service-feature">Estruturação financeira</div>
+                            <div class="service-feature">Preparação para exit</div>
+                        </div>
+                        <button class="btn-primary" style="background-color: #050505; color: #FFFFFF; border-color: #050505;">Saiba Mais</button>
+                    </div>
+                    <div class="service-image">
+                        <div class="service-image-inner">
+                            <img src="images/service_acceleration_coin_bbe73b95.png" alt="Aceleração" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-content">
+                        <div style="display: inline-flex; align-items: center; justify-content: center; width: 80px; height: 80px; background-color: #D4AF37; color: #050505; border: 2px solid #050505; box-shadow: 4px 4px 0px 0px rgba(0,0,0,1); margin-bottom: 1rem; font-size: 2rem;">🏢</div>
+                        <h2>Corporate Venture</h2>
+                        <p>Conectamos grandes empresas a startups inovadoras para gerar valor mútuo.</p>
+                        <div class="service-features">
+                            <div class="service-feature">Open innovation</div>
+                            <div class="service-feature">M&A estratégico</div>
+                            <div class="service-feature">Parcerias comerciais</div>
+                            <div class="service-feature">Transformação digital</div>
+                        </div>
+                        <button class="btn-primary" style="background-color: #050505; color: #FFFFFF; border-color: #050505;">Saiba Mais</button>
+                    </div>
+                    <div class="service-image">
+                        <div class="service-image-inner">
+                            <img src="images/service_corporate_coin_0b799c56.png" alt="Corporate Venture" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="services-investors">
+            <div class="container">
+                <h2>PARA INVESTIDORES</h2>
+                <div class="investors-divider"></div>
+                <div class="investors-grid">
+                    <div class="investor-card">
+                        <div class="investor-icon">🛡️</div>
+                        <h3>Curadoria Rigorosa</h3>
+                        <p>Analisamos centenas de startups para selecionar apenas as melhores oportunidades de investimento.</p>
+                    </div>
+                    <div class="investor-card">
+                        <div class="investor-icon">💰</div>
+                        <h3>Tokenização de Ativos</h3>
+                        <p>Acesso a investimentos em startups através da nossa moeda digital, garantindo liquidez e transparência.</p>
+                    </div>
+                    <div class="investor-card">
+                        <div class="investor-icon">👥</div>
+                        <h3>Clube de Investidores</h3>
+                        <p>Faça parte de uma rede exclusiva de investidores anjo e venture capitalists.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coins Section -->
+    <section class="coins" id="moeda">
+        <div class="coins-split">
+            <div class="coin-side">
+                <div class="coin-badge">Token Utilitário & Investimento</div>
+                <h1 class="coin-title">GOLDEN <br><span class="highlight">NOTES</span></h1>
+                <p class="coin-description">É um ativo digital com plataforma de tokenização de ativos e Smart contract.</p>
+                <div class="coin-image-small">
+                    <img src="images/moeda_v2.png" alt="Golden Notes" />
+                </div>
+                <div class="coin-buttons">
+                    <a href="https://golden-notes.io/" target="_blank" class="btn-primary">Comprar Tokens</a>
+                    <a href="https://www.golden-notes.com/_files/ugd/1e54a2_c54d714e28524775885346578492e90b.pdf" target="_blank" class="btn-outline">Whitepaper</a>
+                </div>
+            </div>
+
+            <div class="coin-side">
+                <div class="coin-badge green">Infraestrutura & Tecnologia</div>
+                <h1 class="coin-title">GOLDEN <br><span class="highlight green">BLOCKCHAIN</span></h1>
+                <p class="coin-description">Tokenização de ativos digitais com smart contract e escrow account peer-to-peer pela liberdade financeira.</p>
+                <div class="coin-image-small">
+                    <img src="images/partners_white/logo-48.png" alt="Golden Blockchain" />
+                </div>
+                <div class="coin-buttons">
+                    <button class="btn-primary">Conhecer Tecnologia</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="coin-benefits">
+            <div class="container">
+                <h2>POR QUE INVESTIR?</h2>
+                <p class="coin-benefits-intro">Golden Blockchain é um ecossistema de tokenização de ativos através de um Smart Contract sobre a Blockchain Bitcoin. Permite ter securitização, trazabilidade e é o combustível de todo o ecossistema.</p>
+                <div class="benefits-grid">
+                    <div class="benefits-list">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">📈</div>
+                            <div class="benefit-content">
+                                <h3>Valorização Consistente</h3>
+                                <p>Mecanismos de queima e escassez programada garantem pressão deflacionária e potencial de valorização a longo prazo.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🔒</div>
+                            <div class="benefit-content">
+                                <h3>Segurança Blockchain</h3>
+                                <p>Todas as transações são registradas em blockchain pública, garantindo imutabilidade e transparência total.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🌍</div>
+                            <div class="benefit-content">
+                                <h3>Usabilidade Real</h3>
+                                <p>Use suas moedas para pagar por serviços, produtos em parceiros ou converter para moeda fiduciária instantaneamente.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">⚡</div>
+                            <div class="benefit-content">
+                                <h3>Staking Rewards</h3>
+                                <p>Ganhe renda passiva apenas mantendo suas moedas na carteira oficial da Golden Investimentos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wallet-box">
+                        <h3>BAIXE A CARTEIRA OFICIAL</h3>
+                        <p>Gerencie seus ativos, faça staking e acompanhe seus rendimentos em tempo real pelo nosso app exclusivo.</p>
+                        <a href="https://www.golden-notes.com/" target="_blank" class="btn-outline">Acessar Plataforma</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>TEM UMA STARTUP INOVADORA?</h2>
+            <p>Estamos sempre em busca de empreendedores visionários. Apresente seu negócio para a Golden Investimentos.</p>
+            <div class="cta-buttons">
+                <a href="mailto:contato@goldeninvestimentos.io" class="btn-primary" style="background-color: #050505; color: #FFFFFF; border-color: #050505;">Enviar Pitch Deck</a>
+                <a href="https://www.golden-notes.com/" target="_blank" class="btn-outline" style="background-color: transparent; color: #050505; border-color: #050505;">Quero ser Investidor</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contato">
+        <div class="contact-header">
+            <div class="container">
+                <h1>FALE <span class="gold">CONOSCO</span></h1>
+                <p>Estamos prontos para atender você. Entre em contato com nossa equipe de especialistas.</p>
+            </div>
+        </div>
+
+        <div class="contact-content">
+            <div class="container">
+                <div>
+                    <h2>CANAIS DE ATENDIMENTO</h2>
+                    <p>Escolha a melhor forma de falar com a Golden Investimentos. Nosso time de suporte está disponível para tirar dúvidas sobre investimentos, plataforma ou parcerias.</p>
+                    <div class="contact-channels">
+                        <div class="contact-channel">
+                            <div class="contact-channel-icon">📞</div>
+                            <div class="contact-channel-content">
+                                <h3>Telefone</h3>
+                                <p>+55 51 98342 9577</p>
+                            </div>
+                        </div>
+                        <div class="contact-channel">
+                            <div class="contact-channel-icon">✉️</div>
+                            <div class="contact-channel-content">
+                                <h3>E-mail</h3>
+                                <p>contato@goldeninvestimentos.io</p>
+                            </div>
+                        </div>
+                        <div class="contact-channel">
+                            <div class="contact-channel-icon">📍</div>
+                            <div class="contact-channel-content">
+                                <h3>Endereços</h3>
+                                <p style="font-size: 0.8rem;">Rua Ernesto Urbani, nº 07 – sala 02 – Canela/RS<br>Rua Joaquim Nabuco, sala 1611 – Petrolina/PE<br>Rua Vinte e Quatro de Outubro, 111 – Porto Alegre/RS</p>
+                            </div>
+                        </div>
+                        <div class="contact-channel">
+                            <div class="contact-channel-icon">🕐</div>
+                            <div class="contact-channel-content">
+                                <h3>Horário de Atendimento</h3>
+                                <p>Segunda a Sexta: 09h às 18h<br>Sábado: 09h às 13h</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Envie uma Mensagem</h3>
+                    <form onsubmit="handleFormSubmit(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Nome</label>
+                                <input type="text" placeholder="Seu nome completo" required />
+                            </div>
+                            <div class="form-group">
+                                <label>Telefone</label>
+                                <input type="tel" placeholder="(00) 00000-0000" required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>E-mail</label>
+                            <input type="email" placeholder="seu@email.com" required />
+                        </div>
+                        <div class="form-group">
+                            <label>Assunto</label>
+                            <select required>
+                                <option value="">Selecione um assunto</option>
+                                <option value="investimentos">Quero Investir</option>
+                                <option value="duvida">Dúvida Geral</option>
+                                <option value="parceria">Parceria</option>
+                                <option value="suporte">Suporte Técnico</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Mensagem</label>
+                            <textarea placeholder="Como podemos ajudar?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-full" style="height: 56px; font-size: 1rem;">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4>Golden Investimentos</h4>
+                    <p>Holding familiar focada em Venture Capital e Private Equity.</p>
+                </div>
+                <div>
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#moeda">Moeda Golden</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contato</h4>
+                    <ul>
+                        <li>+55 51 98342 9577</li>
+                        <li>contato@goldeninvestimentos.io</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Legal</h4>
+                    <p>CNPJ: 52.575.717/0001-65</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>
+                    <p>&copy; 2026 Golden Investimentos. Todos os direitos reservados.</p>
+                </div>
+                <p>Desenvolvido pela Agência Foco2mais</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToSection(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+            const inputs = form.querySelectorAll('input, textarea, select');
+            const name = inputs[0].value;
+            const phone = inputs[1].value;
+            const email = inputs[2].value;
+            const subject = inputs[3].value;
+            const message = inputs[4].value;
+
+            const whatsappMessage = `Olá! Meu nome é ${name}. Telefone: ${phone}. Email: ${email}. Assunto: ${subject}. Mensagem: ${message}`;
+            const whatsappURL = `https://wa.me/5551983429577?text=${encodeURIComponent(whatsappMessage)}`;
+
+            window.open(whatsappURL, '_blank');
+            form.reset();
+        }
+
+        // Update active nav link on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
